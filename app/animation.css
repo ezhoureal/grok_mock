@@ -1,0 +1,35 @@
+/* BG star */
+.bg-large-star {
+    animation: stars_animStar linear infinite 50s;
+    height: calc(100vh + 500px);
+}
+
+.bg-large-star {
+    animation: stars_animStar linear infinite 25s;
+    height: calc(100vh + 500px);
+}
+
+@keyframes stars_animStar {
+    0% {
+        transform: translateY(0)
+    }
+
+    to {
+        transform: translateY(-500px)
+    }
+}
+
+.title span:after {
+    display: block;
+    content: " ";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 5px;
+    /* background-color: #fff;
+    animation: verify-auth_tokenBg__XujP9 .5s ease-out forwards; */
+}
+
+/* BG star end -------------------- */

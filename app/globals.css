@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  overflow: hidden;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,29 +29,6 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-
-  /* BG star */
-  .bg-large-star {
-    animation: stars_animStar linear infinite 50s;
-    height: calc(100vh + 500px);
-  }
-
-  .bg-large-star {
-    animation: stars_animStar linear infinite 25s;
-    height: calc(100vh + 500px);
-  }
-
-  @keyframes stars_animStar {
-    0% {
-      transform: translateY(0)
-    }
-
-    to {
-      transform: translateY(-500px)
-    }
-  }
-
-  /* BG star end -------------------- */
 }
 
 @layer component {

@@ -15,10 +15,10 @@ const config: Config = {
         "large-star": "url('/bg_square_large.webp')",
         "small-star": "url('/bg_square_small.webp')",
       },
+      fontSize: {
+        '3xl': '3rem',
+      }
     },
-    fontSize: {
-      '3xl': '2.5rem',
-    }
   },
   plugins: [],
 };
