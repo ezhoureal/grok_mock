@@ -21,12 +21,36 @@ body {
   background: linear-gradient(to bottom,
       transparent,
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  box-sizing: border-box;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  /* BG star */
+  .bg-large-star {
+    animation: stars_animStar linear infinite 50s;
+    height: calc(100vh + 500px);
+  }
+
+  .bg-large-star {
+    animation: stars_animStar linear infinite 25s;
+    height: calc(100vh + 500px);
+  }
+
+  @keyframes stars_animStar {
+    0% {
+      transform: translateY(0)
+    }
+
+    to {
+      transform: translateY(-500px)
+    }
+  }
+
+  /* BG star end -------------------- */
 }
 
 @layer component {
