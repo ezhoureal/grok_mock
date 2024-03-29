@@ -12,8 +12,8 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-          "large-star": "url('/public/bg_square_large.webp')",
-          "small-star": "url('/public/bg_square_small.webp')",
+        "large-star": "url('/bg_square_large.webp')",
+        "small-star": "url('/bg_square_small.webp')",
       },
     },
     fontSize: {
