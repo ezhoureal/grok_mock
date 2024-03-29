@@ -19,7 +19,58 @@
     }
 }
 
-.title span:after {
+@keyframes verify-auth_tokens__b0GNw {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.title span {
+    animation: 1000ms ease-out 0s 1 normal forwards running verify-auth_tokens__b0GNw;
+    opacity: 0;
+}
+
+.title span+span {
+    margin-left: 9px;
+}
+
+.title span:first-child, .title span:first-child:after {
+    animation-delay: .4s;
+}
+
+.title span:nth-child(2), .title span:nth-child(2):after {
+    animation-delay: .55s;
+}
+
+.title span:nth-child(3), .title span:nth-child(3):after {
+    animation-delay: .7s;
+}
+
+.title span:nth-child(4), .title span:nth-child(4):after {
+    animation-delay: .85s;
+}
+
+.title span:nth-child(5), .title span:nth-child(5):after {
+    animation-delay: 1s;
+}
+
+.title span:nth-child(6), .title span:nth-child(6):after {
+    animation-delay: 1.15s;
+}
+
+@keyframes text_background_appear {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.title span::after {
     display: block;
     content: " ";
     position: absolute;
@@ -28,8 +79,9 @@
     right: -2px;
     bottom: -2px;
     border-radius: 5px;
-    /* background-color: #fff;
-    animation: verify-auth_tokenBg__XujP9 .5s ease-out forwards; */
+    opacity: 0;
+    background-color: #fff;
+    animation: text_background_appear .5s ease-out forwards;
 }
 
 /* BG star end -------------------- */

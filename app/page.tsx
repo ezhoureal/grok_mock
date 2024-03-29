@@ -3,7 +3,7 @@ import './animation.css'
 import './fonts.css'
 
 export default function Home() {
-  const spanStyle = "flex-wrap text-white text-3xl text-center px-1"
+  const spanStyle = "relative block text-white text-3xl text-center p-1"
   const absoluteTop = "absolute top-0 left-0"
   return (
     <main className="bg-black flex h-screen w-screen flex-row items-center justify-stretch box-border">
