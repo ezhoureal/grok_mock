@@ -1,15 +1,13 @@
-'use client'
-import * as React from 'react';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
 import { ThemeProvider, createTheme } from "@mui/material";
+import React from 'react';
 
 const themeUITheme = createTheme({
   palette: {
@@ -47,33 +45,31 @@ export default function AccountSettingDialog({ displayDialog, isOpen }: DialogPr
           open={isOpen}
         >
           <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
-            Modal title
+            Profile settings
           </DialogTitle>
-          <IconButton
-            aria-label="close"
-            onClick={() => displayDialog(false)}
-            sx={{
-              position: 'absolute',
-              right: 8,
-              top: 8,
-              color: (theme) => theme.palette.grey[500],
-            }}
-          >
-          </IconButton>
           <DialogContent dividers>
             <Typography gutterBottom>
               Click the button below to log out of your profile.
             </Typography>
+            <button className='bg-[#2196f3] rounded'>
+              <span className='px-2'>Logout</span>
+            </button>
             <Typography gutterBottom>
               Click the button below to download all data that is associated with your profile. This data includes all conversations stored in Grok as well as all prompts stored in the PromptIDE.
             </Typography>
+            <button className='bg-[#2196f3] rounded'>
+              <span className='px-2'>Download profile data.</span>
+            </button>
             <Typography gutterBottom>
               Clicking the button below erases all data that is associated with your profile. This data includes everything stored in Grok and the PromptIDE. Note that this action is immediate and irreversible. Once the profile has been deleted, there is no way to recover any of the data.
             </Typography>
+            <button className='bg-[#2196f3] rounded'>
+              <span className='px-2'>Delete profile and all data.</span>
+            </button>
           </DialogContent>
           <DialogActions>
-            <Button autoFocus onClick={() => displayDialog(false)}>
-              Save changes
+            <Button onClick={() => displayDialog(false)}>
+              Exit
             </Button>
           </DialogActions>
         </BootstrapDialog>
