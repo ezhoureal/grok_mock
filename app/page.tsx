@@ -2,11 +2,13 @@
 
 import './animation.css'
 import './fonts.css'
+import AccountSettingDialog from './dialog';
 import LoginPage from "./login";
 import { useState } from "react";
 
 export default function Home() {
-  const [dialogOpen, setDialog] = useState(false)
+  const [dialogOpen, displayDialog] = useState(false)
+
   const spanStyle = "relative block text-white text-3xl text-center p-1"
   const absoluteTop = "absolute top-0 left-0"
 
@@ -33,11 +35,9 @@ export default function Home() {
           <img src="/grok.svg" alt="grok logo" className="w-32 h-11" />
         </div>
       </div>
-      <LoginPage openDialog={setDialog.bind(null, true)} />
+      <LoginPage displayDialog={displayDialog} />
       {dialogOpen && (
-        <div>
-          <p>Opened</p>
-        </div>
+        <AccountSettingDialog displayDialog={displayDialog} isOpen={dialogOpen} />
       )}
     </main>
   );
