@@ -1,5 +1,5 @@
 /* BG star */
-.bg-large-star {
+.bg-small-star {
     animation: stars_animStar linear infinite 50s;
     height: calc(100vh + 500px);
 }
