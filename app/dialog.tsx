@@ -40,6 +40,8 @@ export default function AccountSettingDialog({ displayDialog, isOpen }: DialogPr
     <ThemeProvider theme={themeUITheme}>
       <React.Fragment>
         <BootstrapDialog
+          fullWidth={true}
+          maxWidth="md"
           onClose={() => displayDialog(false)}
           aria-labelledby="customized-dialog-title"
           open={isOpen}
@@ -48,23 +50,28 @@ export default function AccountSettingDialog({ displayDialog, isOpen }: DialogPr
             Profile settings
           </DialogTitle>
           <DialogContent dividers>
+            <strong className="block m-3">Logout</strong>
             <Typography gutterBottom>
               Click the button below to log out of your profile.
             </Typography>
-            <button className='bg-[#2196f3] rounded'>
-              <span className='px-2'>Logout</span>
+            <button className='bg-[#2196f3] rounded m-3 py-2'>
+              <span className='px-4'>Logout</span>
             </button>
+
+            <strong className="block m-3">Download data</strong>
             <Typography gutterBottom>
               Click the button below to download all data that is associated with your profile. This data includes all conversations stored in Grok as well as all prompts stored in the PromptIDE.
             </Typography>
-            <button className='bg-[#2196f3] rounded'>
-              <span className='px-2'>Download profile data.</span>
+            <button className='bg-[#2196f3] rounded m-3 py-2'>
+              <span className='px-4'>Download profile data.</span>
             </button>
+
+            <strong className="block m-3">Delete profile</strong>
             <Typography gutterBottom>
               Clicking the button below erases all data that is associated with your profile. This data includes everything stored in Grok and the PromptIDE. Note that this action is immediate and irreversible. Once the profile has been deleted, there is no way to recover any of the data.
             </Typography>
-            <button className='bg-[#2196f3] rounded'>
-              <span className='px-2'>Delete profile and all data.</span>
+            <button className='bg-[#2196f3] rounded m-3 py-2'>
+              <span className='px-4'>Delete profile and all data.</span>
             </button>
           </DialogContent>
           <DialogActions>
