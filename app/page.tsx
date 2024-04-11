@@ -3,7 +3,7 @@
 import './animation.css'
 import './fonts.css'
 import AccountSettingDialog from './dialog';
-import LoginPage from "./login";
+import LoginPage from "./ui/login";
 import { useState } from "react";
 
 export default function Home() {
