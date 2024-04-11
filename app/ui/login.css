@@ -1,0 +1,20 @@
+button {
+  background: #2196f3;
+  color: #fff;
+  border-radius: 5px;
+  height: 52px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1;
+  width: 100%;
+  margin: 5px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+img {
+  display: inline;
+  margin-right: 5px;
+}

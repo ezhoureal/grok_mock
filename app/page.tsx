@@ -1,13 +1,12 @@
-'use client'
+'use server'
 
 import './animation.css'
 import './fonts.css'
-import AccountSettingDialog from './dialog';
-import LoginPage from "./ui/login";
-import { useState } from "react";
+import LoginPage from "./ui/Login";
+import { Suspense } from "react";
+import { Loading } from './ui/Loading';
 
-export default function Home() {
-  const [dialogOpen, displayDialog] = useState(false)
+export default async function Home() {
 
   const spanStyle = "relative block text-white text-3xl text-center p-1"
   const absoluteTop = "absolute top-0 left-0"
@@ -35,10 +34,11 @@ export default function Home() {
           <img src="/grok.svg" alt="grok logo" className="w-32 h-11" />
         </div>
       </div>
-      <LoginPage displayDialog={displayDialog} />
-      {dialogOpen && (
-        <AccountSettingDialog displayDialog={displayDialog} isOpen={dialogOpen} />
-      )}
+      <div className="h-screen flex-1 p-20 flex items-center justify-center flex-col">
+        <Suspense fallback={<Loading />}>
+          <LoginPage/>
+        </Suspense>
+      </div>
     </main>
   );
 }
