@@ -16,7 +16,7 @@
     "next-auth": "^5.0.0-beta.16",
     "react": "^18",
     "react-dom": "^18",
-    "react-loader-spinner": "^6.1.6"
+    "sass": "^1.75.0"
   },
   "devDependencies": {
     "@types/node": "^20",

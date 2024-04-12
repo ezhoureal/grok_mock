@@ -1,16 +1,10 @@
-"use client"
-import { ColorRing } from "react-loader-spinner";
+"use server"
+import styles from "./Loading.module.scss"
 
-export function Loading() {
+export async function Loading() {
   return (
-    <ColorRing
-      visible={true}
-      height="80"
-      width="80"
-      ariaLabel="color-ring-loading"
-      wrapperStyle={{}}
-      wrapperClass="color-ring-wrapper"
-      colors={['#2196f3', '#2196f3', '#2196f3', '#2196f3', '#2196f3']}
-    />
+    <svg className={styles.spinner}>
+      <circle cx="20" cy="20" r="18"></circle>
+    </svg>
   )
 }
