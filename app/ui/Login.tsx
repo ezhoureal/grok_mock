@@ -12,7 +12,7 @@ export default async function LoginPage() {
   return (<React.Fragment>{
     session === null ?
       <React.Fragment>
-        <p className="text-xl text-center pb-5">Sign in with X to join xAI's early access program. Participation in the early access program is currently limited to <a href="www.x.com">X Premium+</a> subscribers.</p>
+        <p className="text-xl text-center pb-5">Sign in with X to join xAI&quot;s early access program. Participation in the early access program is currently limited to <a href="www.x.com">X Premium+</a> subscribers.</p>
         <form
           action={GithubSignIn}
         >
@@ -21,7 +21,7 @@ export default async function LoginPage() {
             Sign in with GitHub
           </button>
         </form>
-        <p className="text-s pt-5 text-center">By clicking "Sign in with X", you confirm you are at least 18 years old, agree to our Terms and acknowledge our Privacy Policy.</p>
+        <p className="text-s pt-5 text-center">By clicking &ldquo;Sign in with X&rdquo;, you confirm you are at least 18 years old, agree to our Terms and acknowledge our Privacy Policy.</p>
       </React.Fragment>
       : <LoggedIn />
   }</React.Fragment>)

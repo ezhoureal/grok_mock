@@ -40,7 +40,7 @@ export default async function Home() {
         </Suspense>
         <footer className="absolute bottom-0 p-20 w-full h-50">
           <span className='text-s flex items-center'>
-            <a href='www.x.com'><img className="w-10 h-10 float-left mr-2" src="/xai.svg" /></a>
+            <a href='www.x.com'><img alt="xAI logo" className="w-10 h-10 float-left mr-2" src="/xai.svg" /></a>
             All rights reserved. <br /> 2024.</span>
           <span className='text-s text-right'>
             <a href='www.x.com'>Terms and Conditions</a>
