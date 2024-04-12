@@ -1,5 +1,5 @@
 button.submit {
-  background: #2196f3;
+  background: var(--highlight-color);
   color: #fff;
   border-radius: 5px;
   height: 52px;

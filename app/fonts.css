@@ -4,7 +4,7 @@ footer span, p {
 
 
 p a, span a {
-    color: #2196f3;
+    color: var(--highlight-color);
     text-decoration: none;
 }
 
