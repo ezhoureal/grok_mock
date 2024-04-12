@@ -34,10 +34,20 @@ export default async function Home() {
           <img src="/grok.svg" alt="grok logo" className="w-32 h-11" />
         </div>
       </div>
-      <div className="h-screen flex-1 p-20 flex items-center justify-center flex-col">
+      <div className="relative h-screen flex-1 p-20 flex items-center justify-center flex-col">
         <Suspense fallback={<Loading />}>
-          <LoginPage/>
+          <LoginPage />
         </Suspense>
+        <footer className="absolute bottom-0 p-20 w-full h-50">
+          <span className='text-s flex items-center'>
+            <a href='www.x.com'><img className="w-10 h-10 float-left mr-2" src="/xai.svg" /></a>
+            All rights reserved. <br /> 2024.</span>
+          <span className='text-s text-right'>
+            <a href='www.x.com'>Terms and Conditions</a>
+            <br/>
+            <a href='www.x.com'>Privacy Policy</a>
+          </span>
+        </footer>
       </div>
     </main>
   );

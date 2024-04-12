@@ -36,4 +36,11 @@ body {
   .gradient {
     background: linear-gradient(135deg, #000, rgba(125, 144, 159, .15))
   }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

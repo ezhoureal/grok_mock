@@ -1,12 +1,13 @@
-p {
+footer span, p {
     color: #d5dbe0;
 }
 
-p a {
+
+p a, span a {
     color: #2196f3;
     text-decoration: none;
 }
 
-p a:hover {
+p a:hover, span a:hover {
     text-decoration: underline;
 }
