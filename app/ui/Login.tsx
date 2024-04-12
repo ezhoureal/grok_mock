@@ -7,7 +7,7 @@ import React from "react";
 import { LoggedIn } from "./LoggedIn";
 
 export default async function LoginPage() {
-  const [session] = await Promise.all([auth(), new Promise(resolve=>setTimeout(resolve, 1000))])
+  const [session] = await Promise.all([auth(), new Promise(resolve=>setTimeout(resolve, 2000))])
   console.log(session)
   return (<React.Fragment>{
     session === null ?
