@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 
 import { ThemeProvider, createTheme } from "@mui/material";
 import React from 'react';
+import { GithubSignOut } from '../data/auth_helper';
 
 const themeUITheme = createTheme({
   palette: {
@@ -54,10 +55,11 @@ export default function AccountSettingDialog({ displayDialog, isOpen }: DialogPr
             <Typography gutterBottom>
               Click the button below to log out of your profile.
             </Typography>
-            <button className='bg-[#2196f3] rounded m-3 py-2'>
-              <span className='px-4'>Logout</span>
-            </button>
-
+            <form action={GithubSignOut}>
+              <button className='bg-[#2196f3] rounded m-3 py-2' type="submit">
+                <span className='px-4'>Logout</span>
+              </button>
+            </form>
             <strong className="block m-3">Download data</strong>
             <Typography gutterBottom>
               Click the button below to download all data that is associated with your profile. This data includes all conversations stored in Grok as well as all prompts stored in the PromptIDE.

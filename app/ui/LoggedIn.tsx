@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from "react";
-import AccountSettingDialog from "../dialog";
+import AccountSettingDialog from "./dialog";
 
 export function LoggedIn()
 {

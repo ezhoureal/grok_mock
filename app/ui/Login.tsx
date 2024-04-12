@@ -1,6 +1,6 @@
 "use server"
 
-import { GithubSignIn } from "@/app/data/auth"
+import { GithubSignIn } from "@/app/data/auth_helper"
 import "./login.css"
 import { auth } from "@/auth";
 import React from "react";
@@ -16,7 +16,7 @@ export default async function LoginPage() {
         <form
           action={GithubSignIn}
         >
-          <button type="submit">
+          <button className="submit" type="submit">
             <img src="/github.png"></img>
             Sign in with GitHub
           </button>
