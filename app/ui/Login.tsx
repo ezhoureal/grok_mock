@@ -1,7 +1,7 @@
 "use server"
 
 import { GithubSignIn } from "@/app/data/auth_helper"
-import "./login.css"
+import styles from "./login.module.css"
 import { auth } from "@/auth";
 import React from "react";
 import { LoggedIn } from "./LoggedIn";
@@ -16,12 +16,12 @@ export default async function LoginPage() {
         <form
           action={GithubSignIn}
         >
-          <button className="submit" type="submit">
-            <img src="/github.png"></img>
+          <button className={styles.submit} type="submit">
+            <img className={styles.github} src="/github.png"></img>
             Sign in with GitHub
           </button>
         </form>
-        <p className="text-s pt-5 text-center">By clicking &ldquo;Sign in with X&rdquo;, you confirm you are at least 18 years old, agree to our Terms and acknowledge our Privacy Policy.</p>
+        <p className="text-s pt-5 px-16 text-center">By clicking &ldquo;Sign in&rdquo;, you confirm you are at least 18 years old, agree to our Terms and acknowledge our Privacy Policy.</p>
       </React.Fragment>
       : <LoggedIn />
   }</React.Fragment>)

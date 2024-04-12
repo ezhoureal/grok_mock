@@ -34,7 +34,7 @@ export default async function Home() {
           <img src="/grok.svg" alt="grok logo" className="w-32 h-11" />
         </div>
       </div>
-      <div className="relative h-screen flex-1 p-5 md:p-15 flex items-center justify-center flex-col">
+      <div className="relative h-screen flex-1 p-5 md:p-20 flex items-center justify-center flex-col">
         <Suspense fallback={<Loading />}>
           <LoginPage />
         </Suspense>
