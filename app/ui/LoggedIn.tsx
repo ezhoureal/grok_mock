@@ -1,6 +1,8 @@
 "use client"
 import React, { useState } from "react";
-import AccountSettingDialog from "./dialog";
+
+import dynamic from "next/dynamic";
+const AccountSettingDialog = dynamic(()=>import("./dialog"));
 
 export function LoggedIn()
 {
