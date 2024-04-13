@@ -1,9 +1,11 @@
-import styles from "./Loading.module.scss"
+import React from "react"
+import styles from "./Loading.module.css"
 
 export function Loading() {
   return (
-    <svg className={styles.spinner}>
-      <circle cx="20" cy="20" r="18"></circle>
-    </svg>
+    <React.Fragment>
+      <div className={styles["lds-ring"]}><div></div><div></div><div></div><div></div></div>
+      <p>Checking your account status</p>
+    </React.Fragment>
   )
 }
