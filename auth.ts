@@ -5,5 +5,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
     github({})
   ],
+  session: {
+    maxAge: 8 * 60 * 60 // 8H
+  },
   secret: process.env.AUTH_SECRET
 })
