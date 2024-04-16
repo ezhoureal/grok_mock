@@ -40,7 +40,7 @@ type DialogProps = {
 export default function AccountSettingDialog({ displayDialog, isOpen }: DialogProps) {
   return (
     <ThemeProvider theme={themeUITheme}>
-      <React.Fragment>
+      <>
         <BootstrapDialog
           fullWidth={true}
           maxWidth="md"
@@ -83,7 +83,7 @@ export default function AccountSettingDialog({ displayDialog, isOpen }: DialogPr
             </Button>
           </DialogActions>
         </BootstrapDialog>
-      </React.Fragment>
+      </>
     </ThemeProvider>
   );
 }
